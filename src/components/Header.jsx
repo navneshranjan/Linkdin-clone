@@ -30,10 +30,34 @@ const Header = (props) => {
         </Search>
         <Nav>
           <NavListWrap>
-            <NavList>
+            <NavList className="active">
               <a>
                 <img src="/images 2/nav-home.svg" alt="home" />
                 <span>Home</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images 2/nav-network.svg" alt="home" />
+                <span>My Networks</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images 2/nav-jobs.svg" alt="home" />
+                <span>Jobs</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images 2/nav-messaging.svg" alt="home" />
+                <span>Messages</span>
+              </a>
+            </NavList>
+            <NavList>
+              <a>
+                <img src="/images 2/nav-notifications.svg" alt="home" />
+                <span>Notification</span>
               </a>
             </NavList>
           </NavListWrap>
@@ -121,6 +145,22 @@ const NavListWrap = styled.ul`
   display: flex;
   flex-wrap: nowrap;
   list-style-type: none;
+
+  /* black underline for active nav icon */
+
+  .active {
+    span: after {
+      content: "";
+      transform: scaleX(1);
+      border-bottom: 2px solid var(--white, #fff);
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      transition: transform 0.02s ease-in-out;
+      width: 100%;
+      border-color: rgba(0, 0, 0, 0.9);
+    }
+  }
 `;
 const NavList = styled.li`
   display: flex;
