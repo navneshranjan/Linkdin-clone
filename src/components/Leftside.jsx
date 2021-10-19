@@ -30,6 +30,23 @@ const Leftside = (props) => {
           </span>
         </Item>
       </ArtCard>
+      <CommunityCard>
+        <a>
+          <span>Group</span>
+        </a>
+        <a>
+          <span>
+            Events
+            <img src="/images 2/plus-icon.svg" alt="" />
+          </span>
+        </a>
+        <a>
+          <span>Follow Hastags</span>
+        </a>
+        <a>
+          <span>discover More</span>
+        </a>
+      </CommunityCard>
     </Container>
   );
 };
@@ -146,5 +163,34 @@ const Item = styled.a`
     background-color: rgba(0, 0, 0, 0.08);
   }
 `;
+const CommunityCard = styled(ArtCard)`
+  padding: 8px 0 0;
+  text-align: left;
 
+  display: flex;
+  flex-direction: column;
+  a {
+    color: black;
+
+    padding: 4px 12px 4px 12px;
+    font-size: 12px;
+
+    &:hover {
+      color: blue;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &:last-child {
+      color: rgba(0, 0, 0, 0.6);
+      border-top: 1px solid rgba(0, 0, 0, 0.09);
+      padding: 12px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+`;
 export default Leftside;
