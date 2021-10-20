@@ -18,8 +18,8 @@ const Home = (props) => {
       </Section>
       <Layout>
         <Leftside />
-        <Rightside />
         <Main />
+        <Rightside />
       </Layout>
     </Container>
   );
