@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Styled from "styled-components";
 
 const Header = (props) => {
   return (
@@ -7,7 +6,7 @@ const Header = (props) => {
       <Content>
         <Logo>
           <a href="/home">
-            <img src="/images 2/home-logo.svg" />
+            <img src="/images 2/home-logo.svg" alt="" />
           </a>
         </Logo>
         <Search>
@@ -15,49 +14,43 @@ const Header = (props) => {
             <input type="text" placeholder="Search" />
           </div>
           <SearchIcon>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              data-supported-dps="16x16"
-              fill="currentColor"
-              width="16"
-              height="16"
-              focusable="false"
-            >
-              <path d="M14.56 12.44L11.3 9.18a5.51 5.51 0 10-2.12 2.12l3.26 3.26a1.5 1.5 0 102.12-2.12zM3 6.5A3.5 3.5 0 116.5 10 3.5 3.5 0 013 6.5z"></path>
-            </svg>
+            <img src="/images 2/search-icon.svg" alt="" />
           </SearchIcon>
         </Search>
         <Nav>
           <NavListWrap>
             <NavList className="active">
               <a>
-                <img src="/images 2/nav-home.svg" alt="home" />
+                <img src="/images 2/nav-home.svg" alt="" />
                 <span>Home</span>
               </a>
             </NavList>
+
             <NavList>
               <a>
-                <img src="/images 2/nav-network.svg" alt="home" />
-                <span>My Networks</span>
+                <img src="/images 2/nav-network.svg" alt="" />
+                <span>My Network</span>
               </a>
             </NavList>
+
             <NavList>
               <a>
-                <img src="/images 2/nav-jobs.svg" alt="home" />
+                <img src="/images 2/nav-jobs.svg" alt="" />
                 <span>Jobs</span>
               </a>
             </NavList>
+
             <NavList>
               <a>
-                <img src="/images 2/nav-messaging.svg" alt="home" />
-                <span>Messages</span>
+                <img src="/images 2/nav-messaging.svg" alt="" />
+                <span>Messaging</span>
               </a>
             </NavList>
+
             <NavList>
               <a>
-                <img src="/images 2/nav-notifications.svg" alt="home" />
-                <span>Notification</span>
+                <img src="/images 2/nav-notifications.svg" alt="" />
+                <span>Notifications</span>
               </a>
             </NavList>
 
@@ -67,10 +60,12 @@ const Header = (props) => {
                 <span>Me</span>
                 <img src="/images 2/down-icon.svg" alt="" />
               </a>
+
               <SignOut>
                 <a>Sign Out</a>
               </SignOut>
             </User>
+
             <Work>
               <a>
                 <img src="/images 2/nav-work.svg" alt="" />
@@ -87,30 +82,30 @@ const Header = (props) => {
   );
 };
 
-const Container = Styled.div`
-background-color:white;
-border-bottom:1px solid rgba(0,0,0,0.08);
-left: 0;
-padding: 0 24px;
-top: 0;
-position:fixed;
-
-width: 100vw;
-z-index:100;
+const Container = styled.div`
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  left: 0;
+  padding: 0 24px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
 `;
-const Content = Styled.div`
-display:flex;
-align-items:center;
-margin:0 auto
-min-height:100%;
-max-width:1128px;
 
-
+const Content = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 100%;
+  max-width: 1128px;
 `;
+
 const Logo = styled.span`
   margin-right: 8px;
-  font-size: 0;
+  font-size: 0px;
 `;
+
 const Search = styled.div`
   opacity: 1;
   flex-grow: 1;
@@ -134,6 +129,7 @@ const Search = styled.div`
     }
   }
 `;
+
 const SearchIcon = styled.div`
   width: 40px;
   position: absolute;
@@ -143,7 +139,6 @@ const SearchIcon = styled.div`
   border-radius: 0 2px 2px 0;
   margin: 0;
   pointer-events: none;
-  /* whole thing is a text  box insted of pointer */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,43 +147,41 @@ const SearchIcon = styled.div`
 const Nav = styled.nav`
   margin-left: auto;
   display: block;
-
   @media (max-width: 768px) {
     position: fixed;
     left: 0;
     bottom: 0;
     background: white;
     width: 100%;
-  } ;
+  }
 `;
+
 const NavListWrap = styled.ul`
   display: flex;
   flex-wrap: nowrap;
   list-style-type: none;
-
-  /* black underline for active nav icon */
-
   .active {
-    span: after {
+    span:after {
       content: "";
       transform: scaleX(1);
       border-bottom: 2px solid var(--white, #fff);
       bottom: 0;
       left: 0;
       position: absolute;
-      transition: transform 0.02s ease-in-out;
+      transition: transform 0.2s ease-in-out;
       width: 100%;
       border-color: rgba(0, 0, 0, 0.9);
     }
   }
 `;
+
 const NavList = styled.li`
   display: flex;
   align-items: center;
   a {
-    display: flex;
-    background: transparent;
     align-items: center;
+    background: transparent;
+    display: flex;
     flex-direction: column;
     font-size: 12px;
     font-weight: 400;
@@ -198,18 +191,15 @@ const NavList = styled.li`
     min-width: 80px;
     position: relative;
     text-decoration: none;
-
     span {
       color: rgba(0, 0, 0, 0.6);
       display: flex;
       align-items: center;
     }
-
     @media (max-width: 768px) {
       min-width: 70px;
     }
   }
-
   &:hover,
   &:active {
     a {
@@ -219,6 +209,7 @@ const NavList = styled.li`
     }
   }
 `;
+
 const SignOut = styled.div`
   position: absolute;
   top: 45px;
@@ -230,33 +221,31 @@ const SignOut = styled.div`
   transition-duration: 167ms;
   text-align: center;
   display: none;
-  /* this will hide the text */
 `;
+
 const User = styled(NavList)`
   a > svg {
     width: 24px;
     border-radius: 50%;
   }
-
   a > img {
     width: 24px;
     height: 24px;
-    border-radius: 50px;
+    border-radius: 50%;
   }
   span {
     display: flex;
     align-items: center;
   }
   &:hover {
-    /* fancy way to call component */
     ${SignOut} {
       align-items: center;
       display: flex;
-      justify-items: center;
+      justify-content: center;
     }
   }
 `;
-// this is how we borrow style from other components
+
 const Work = styled(User)`
   border-left: 1px solid rgba(0, 0, 0, 0.08);
 `;
